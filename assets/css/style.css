@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#page>header {
+  grid-area: head;
+  background-color: #8ca0ff;
+}
+
+#page>nav {
+  grid-area: nav;
+  background-color: #ffa08c;
+
+}
+
+#page>main {
+  grid-area: main;
+  background-color: #ffff64;
+}
+
+#page>footer {
+  grid-area: foot;
+  background-color: #8cffa0;
+}
+
+#page {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-areas:
+    "nav"
+    "head"
+    "main"
+    "foot";
+  grid-template-columns: 1fr;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+nav div{
+ padding: 25px 10px;
+}
+
+nav ul{
+  display: none;
+}
+
+nav h3{
+  color: #71a1ff;
+}
+
+nav h3 i{
+  color: #71ffcf;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: black;
+}
+
+header{
+padding: 10px;
+text-align: center;
+}
+
+.orden, .filtro{
+  width: 100%;
+}
+
+main{
+  padding: 10px;
+}
+
+.ramos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.ramos div{
+  text-align: center;
+  width: 100%;
+}
+.ramos div div {
+  margin: 5px 0px;
+  width: 100%;
+}
+
+.ramos button{
+  background-color: #ffa08c;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.piemain{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.botones{
+  margin: 0 auto;
+  padding: 15px 0;
+
+}
+
+img {
+  width: 100%;
+  height: 250px;
+  max-width: 200px;
+}
+
+ul {
+  list-style: none;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+footer div{
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width:576px) {
+  #page {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+      "nav head"
+      "nav main"
+      "foot main";
+    grid-template-columns: 150px auto;
+  }
+
+  .ramos div {
+    width: 25%;
+  }
+
+  nav{
+    display: block;
+  }
+
+  nav ul{
+    display: block;
+  }
+
+  nav div{
+    display: none;
+  }
+}
